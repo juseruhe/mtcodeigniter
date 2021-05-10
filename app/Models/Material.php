@@ -44,28 +44,8 @@ class Material extends Model
 
 
 
-// Consultas a la Base de Datos
-	public function listarMateriales(){
-		$materiales = $this->db->query("SELECT * from materiales ");
-		return $materiales->getResult();
-	}
 
-	public function crearMaterial($datos){
+	
 
-		$valores = $this->db->table('materiales');
-
-		$valores->insert($datos);
-
-		}
-
-
-		public function mostrarMaterial($id){
-
-			$materiales = $this->db->query("SELECT * from materiales");
-
-			$materiales->where($id);
-
-			return $materiales->get()->getResultArray();
-			
-		}
+		
 }
