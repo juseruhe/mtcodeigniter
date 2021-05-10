@@ -6,10 +6,14 @@ use CodeIgniter\Database\Seeder;
 
 use App\Database\Seeds\MaterialSeeder;
 
+use App\Database\Seeds\CategoriaSeeder;
+
 class GeneralSeeder extends Seeder
 {
 	public function run()
 	{
 		$this->call(MaterialSeeder::class);
+		$this->call(CategoriaSeeder::class);
+
 	}
 }

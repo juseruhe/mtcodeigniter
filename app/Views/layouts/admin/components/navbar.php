@@ -32,6 +32,17 @@
       </li>
 
 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <i class="fab fa-trade-federation"></i> Categoría
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="<?php echo base_url()."/categoria" ?>">Mostrar Categorias</a>
+          <a class="dropdown-item" href="<?php echo base_url()."/categoria/crear/" ?>">Crear Categoría</a>
+      
+        </div>
+      </li>
+
 
 
 </ul>

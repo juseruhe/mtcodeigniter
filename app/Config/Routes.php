@@ -33,9 +33,9 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
+$routes->get('/', 'Home::index');
 
 // Material
-$routes->get('/', 'Home::index');
 $routes->get('material','MaterialController::index');
 $routes->get('material/crear','MaterialController::create');
 $routes->post('material','MaterialController::store');
@@ -43,6 +43,19 @@ $routes->get('material/(:num)','MaterialController::show/$1');
 $routes->get('material/editar/(:num)','MaterialController::edit/$1');
 $routes->post('material/(:num)','MaterialController::update/$1');
 $routes->get('material/eliminar/(:num)','MaterialController::destroy/$1');
+
+
+// Categoria
+$routes->get('categoria','CategoriaController::index');
+$routes->get('categoria/crear','CategoriaController::create');
+$routes->post('categoria','CategoriaController::store');
+$routes->get('categoria/(:num)','CategoriaController::show/$1');
+$routes->get('categoria/editar/(:num)','CategoriaController::edit/$1');
+$routes->post('categoria/(:num)','CategoriaController::update/$1');
+$routes->get('categoria/eliminar/(:num)','CategoriaController::destroy/$1');
+
+
+
 
 
 
