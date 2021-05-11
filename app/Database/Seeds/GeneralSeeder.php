@@ -14,6 +14,7 @@ class GeneralSeeder extends Seeder
 	{
 		$this->call(MaterialSeeder::class);
 		$this->call(CategoriaSeeder::class);
+		$this->call(ColorSeeder::class);
 
 	}
 }
