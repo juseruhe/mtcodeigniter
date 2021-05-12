@@ -60,11 +60,17 @@ $routes->get('color/crear','ColorController::create');
 $routes->post('color','ColorController::store');
 $routes->get('color/(:num)','ColorController::show/$1');
 $routes->get('color/editar/(:num)','ColorController::edit/$1');
-$routes->post('color/:num','ColorController::update/$1');
+$routes->post('color/(:num)','ColorController::update/$1');
 $routes->get('color/eliminar/(:num)','ColorController::destroy/$1');
 
-
-
+// Clasificación
+$routes->get('clasificacion','ClasificacionController::index');
+$routes->get('clasificacion/crear','ClasificacionController::create');
+$routes->post('clasificacion','ClasificacionController::store');
+$routes->get('clasificacion/(:num)','ClasificacionController::show/$1');
+$routes->get('clasificacion/editar/(:num)','ClasificacionController::edit/$1');
+$routes->post('clasificacion/(:num)','ClasificacionController::update/$1');
+$routes->get('clasificacion/eliminar/(:num)','ClasificacionController::destroy/$1');
 
 
 

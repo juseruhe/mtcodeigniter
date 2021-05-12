@@ -9,7 +9,7 @@
    
 
     <div class="card-body text-center">
-    <form action="<?php echo base_url()."/ColorController/store"    ?>" method="POST">
+    <form action="<?php echo base_url()."/color"    ?>" method="POST">
 
     <label for="nombre">Nombre de Color:</label>
     <input type="text" name="nombre" >

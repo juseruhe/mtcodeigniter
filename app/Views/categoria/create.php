@@ -9,7 +9,7 @@
    
 
     <div class="card-body text-center">
-    <form action="<?php echo base_url().'/CategoriaController/store'?>" method="POST">
+    <form action="<?php echo base_url().'/categoria'?>" method="POST">
 
     <label for="nombre">Nombre de Categoría:</label>
     <input type="text" name="nombre" >

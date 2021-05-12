@@ -9,7 +9,7 @@
    
 
     <div class="card-body text-center">
-    <form action="<?php echo base_url().'/MaterialController/update/'.$material['id'] ?>" method="POST">
+    <form action="<?php echo base_url().'/material/'.$material['id'] ?>" method="POST">
 
     <label for="nombre">Nombre de Material:</label>
     <input type="text" name="nombre" value="<?php echo $material["nombre"] ?>" >

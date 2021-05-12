@@ -9,7 +9,7 @@
    
 
     <div class="card-body text-center">
-    <form action="<?php  echo base_url().'/CategoriaController/update/'.$categoria["id"] ?>" method="POST">
+    <form action="<?php  echo base_url().'/categoria/'.$categoria["id"] ?>" method="POST">
 
     <label for="nombre">Nombre de Categoría:</label>
     <input type="text" name="nombre" value="<?php echo $categoria["nombre"] ?>" >

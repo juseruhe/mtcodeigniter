@@ -43,6 +43,28 @@
         </div>
       </li>
 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <i class="fab fa-trade-federation"></i> Color
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="<?php echo base_url()."/color" ?>">Mostrar Colores</a>
+          <a class="dropdown-item" href="<?php echo base_url()."/color/crear/" ?>">Crear Color</a>
+      
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <i class="fab fa-trade-federation"></i> Clasificación
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="<?php echo base_url()."/clasificacion" ?>">Mostrar Clasificaciones</a>
+          <a class="dropdown-item" href="<?php echo base_url()."/clasificacion/crear/" ?>">Crear Clasificación</a>
+      
+        </div>
+      </li>
+
 
 
 </ul>

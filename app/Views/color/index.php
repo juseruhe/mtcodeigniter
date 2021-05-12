@@ -7,7 +7,7 @@
 
 <h3 class="text-center my-4 ">Colores</h3>
 
-<a href="#" class="btn btn-primary my-4"> <i class="fas fa-plus-circle"></i>    Crear Color</a>
+<a href="<?php echo base_url().'/color/crear' ?>" class="btn btn-primary my-4"> <i class="fas fa-plus-circle"></i>    Crear Color</a>
  
     <table class="table table-dark  text-center   ">
     <thead>
