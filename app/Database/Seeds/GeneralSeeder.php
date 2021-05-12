@@ -18,6 +18,7 @@ class GeneralSeeder extends Seeder
 		$this->call(ClasificacionSeeder::class);
 		$this->call(TallaSeeder::class);
 		$this->call(TipoDocumentoSeeder::class);
+		$this->call(GeneroSeeder::class);
 
 	}
 }

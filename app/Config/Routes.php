@@ -93,6 +93,18 @@ $routes->post('tipo_documento/(:num)','TipoDocumentoController::update/$1');
 $routes->get('tipo_documento/eliminar/(:num)','TipoDocumentoController::destroy/$1');
 
 
+// Genero
+$routes->get('genero','GeneroController::index');
+$routes->get('genero/crear','GeneroController::create');
+$routes->post('genero','GeneroController::store');
+$routes->get('genero/(:num)','GeneroController::show/$1');
+$routes->get('genero/editar/(:num)','GeneroController::edit/$1');
+$routes->post('genero/(:num)','GeneroController::update/$1');
+$routes->get('genero/eliminar/(:num)','GeneroController::destroy/$1');
+
+
+
+
 
 
 
