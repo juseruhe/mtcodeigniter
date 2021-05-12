@@ -73,6 +73,18 @@ $routes->post('clasificacion/(:num)','ClasificacionController::update/$1');
 $routes->get('clasificacion/eliminar/(:num)','ClasificacionController::destroy/$1');
 
 
+//Talla
+$routes->get('talla','TallaController::index');
+$routes->get('talla/crear','TallaController::create');
+$routes->post('talla','TallaController::store');
+$routes->get('talla/(:num)','TallaController::show/$1');
+$routes->get('talla/editar/(:num)','TallaController::edit/$1');
+$routes->post('talla/(:num)','TallaController::update/$1');
+$routes->get('talla/eliminar/(:num)','TallaController::destroy/$1');
+
+
+
+
 
 
 
