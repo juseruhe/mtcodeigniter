@@ -83,6 +83,16 @@ $routes->post('talla/(:num)','TallaController::update/$1');
 $routes->get('talla/eliminar/(:num)','TallaController::destroy/$1');
 
 
+// Tipo de Documento
+$routes->get('tipo_documento','TipoDocumentoController::index');
+$routes->get('tipo_documento/crear','TipoDocumentoController::create');
+$routes->post('tipo_documento','TipoDocumentoController::store');
+$routes->get('tipo_documento/(:num)','TipoDocumentoController::show/$1');
+$routes->get('tipo_documento/editar/(:num)','TipoDocumentoController::edit/$1');
+$routes->post('tipo_documento/(:num)','TipoDocumentoController::update/$1');
+$routes->get('tipo_documento/eliminar/(:num)','TipoDocumentoController::destroy/$1');
+
+
 
 
 

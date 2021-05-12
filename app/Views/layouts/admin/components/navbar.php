@@ -76,6 +76,17 @@
         </div>
       </li>
 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <i class="fab fa-trade-federation"></i> Tipo Documento
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="<?php echo base_url()."/tipo_documento" ?>">Mostrar Tipos Documento</a>
+          <a class="dropdown-item" href="<?php echo base_url()."/tipo_documento/crear/" ?>">Crear Tipo Documento</a>
+      
+        </div>
+      </li>
+
 
 
 </ul>
