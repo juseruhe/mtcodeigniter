@@ -63,4 +63,41 @@ class ColorController extends BaseController
 		return view('color/show', $datos);
 
 	}
+
+	public function edit($id){
+
+		$modelo = new Color();
+
+		$datos['color'] = $modelo->where('id',$id)->first();
+
+		// Componentes
+		$datos['navbar'] = view('layouts/admin/components/navbar');
+		
+		$datos['footer'] = view('layouts/admin/components/footer');
+
+		return view('color/edit', $datos);
+	}
+
+
+	public function update($id){
+
+		$modelo = new Color();
+
+		$datos = [
+			"nombre" => $_POST["nombre"]
+		];
+
+		$modelo->where('id',$id)->update($id,$datos);
+
+		return redirect()->to(base_url().'/color/'.$id);
+}
+
+public function destroy($id){
+
+	$modelo = new Color();
+
+	$modelo->where('id',$id)->delete();
+
+	return redirect()->to(base_url().'/color/');
+}
 }

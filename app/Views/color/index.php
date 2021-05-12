@@ -29,8 +29,8 @@
     <td><?php echo $color["nombre"] ?></td>
     <td>
     <a class="btn btn-info" href="<?php echo base_url().'/color/'.$color["id"] ?>"><i class="fas fa-eye"></i>  Mostrar</a>
-    <a class="btn btn-warning" href="#"><i class="fas fa-edit"></i>  Actualizar</a>
-    <a class="btn btn-danger" href="#"><i class="fas fa-eraser"></i>   Eliminar</a>
+    <a class="btn btn-warning" href="<?php echo base_url().'/color/editar/'.$color["id"] ?>"><i class="fas fa-edit"></i>  Actualizar</a>
+    <a class="btn btn-danger" href="<?php echo base_url().'/color/eliminar/'.$color["id"] ?>"><i class="fas fa-eraser"></i>   Eliminar</a>
     </td>
    
     </tr>

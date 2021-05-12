@@ -59,6 +59,10 @@ $routes->get('color','ColorController::index');
 $routes->get('color/crear','ColorController::create');
 $routes->post('color','ColorController::store');
 $routes->get('color/(:num)','ColorController::show/$1');
+$routes->get('color/editar/(:num)','ColorController::edit/$1');
+$routes->post('color/:num','ColorController::update/$1');
+$routes->get('color/eliminar/(:num)','ColorController::destroy/$1');
+
 
 
 
