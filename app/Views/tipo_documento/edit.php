@@ -17,7 +17,7 @@
     <label for="nombre">Siglas:</label>
     <input type="text" name="siglas" value="<?php echo $tipo_documento["siglas"] ?>" >
     
-    <input class="btn btn-success my-4" type="submit" value="Actualizar Tipo Documento">
+    <button class="btn btn-success my-4" type="submit"><i class="fas fa-redo-alt"></i> Actualizar Tipo Documento </button>
     <a class="btn btn-danger my-4" href="<?php  echo base_url()."/tipo_documento/"  ?>"><i class="fas fa-arrow-left"></i>   Volver</a>
     </form>
     </div>

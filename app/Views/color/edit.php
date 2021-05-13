@@ -15,7 +15,7 @@
     <label for="nombre">Nombre de Color:</label>
     <input type="text" name="nombre" value="<?php echo $color["nombre"] ?>" >
     
-    <input class="btn btn-success my-4" type="submit" value="Actualizar Color">
+    <button class="btn btn-success my-4" type="submit"><i class="fas fa-redo-alt"></i> Actualizar Color </button>
     <a class="btn btn-danger my-4" href="<?php  echo base_url()."/color/"  ?>"><i class="fas fa-arrow-left"></i>   Volver</a>
     </form>
     </div>

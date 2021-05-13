@@ -14,7 +14,7 @@
     <label for="nombre">Nombre de Rol:</label>
     <input type="text" name="nombre" value="<?php echo $rol["nombre"] ?>" >
     
-    <input class="btn btn-success my-4" type="submit" value="Actualizar Rol">
+    <button class="btn btn-success my-4" type="submit"><i class="fas fa-redo-alt"></i> Actualizar Rol </button>
     <a class="btn btn-danger my-4" href="<?php  echo base_url()."/rol/"  ?>"><i class="fas fa-arrow-left"></i>   Volver</a>
     </form>
     </div>

@@ -15,7 +15,7 @@
     <label for="nombre">Nombre de Género:</label>
     <input type="text" name="nombre" value="<?php echo $genero["nombre"] ?>" >
     
-    <input class="btn btn-success my-4" type="submit" value="Actualizar Género">
+    <button class="btn btn-success my-4" type="submit"><i class="fas fa-redo-alt"></i> Actualizar Género </button>
     <a class="btn btn-danger my-4" href="<?php  echo base_url()."/genero/"  ?>"><i class="fas fa-arrow-left"></i>   Volver</a>
     </form>
     </div>

@@ -15,7 +15,7 @@
     <label for="nombre">Nombre de Clasificación:</label>
     <input type="text" name="nombre" value="<?php echo $clasificacion["nombre"] ?>" >
     
-    <input class="btn btn-success my-4" type="submit" value="Actualizar Clasificacion">
+    <button class="btn btn-success my-4" type="submit" > <i class="fas fa-redo-alt"></i> Actualizar Clasificacion </button>
     <a class="btn btn-danger my-4" href="<?php  echo base_url()."/clasificacion/"  ?>"><i class="fas fa-arrow-left"></i>   Volver</a>
     </form>
     </div>
