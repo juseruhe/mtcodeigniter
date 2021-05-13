@@ -110,6 +110,17 @@
         </div>
       </li>
 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <i class="fab fa-trade-federation"></i> Rol
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="<?php echo base_url()."/rol" ?>">Mostrar Roles</a>
+          <a class="dropdown-item" href="<?php echo base_url()."/rol/crear/" ?>">Crear Rol</a>
+      
+        </div>
+      </li>
+
 
 </ul>
 </nav>

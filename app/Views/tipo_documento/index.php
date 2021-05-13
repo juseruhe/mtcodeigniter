@@ -27,8 +27,8 @@
     <tr>
    
     <td><?php echo $tipo_documento['id'] ?></td>
-    <td><?php echo $tipo_documento['siglas'] ?></td>
     <td><?php echo $tipo_documento['nombre'] ?></td>
+    <td><?php echo $tipo_documento['siglas'] ?></td>
     <td>
     <a class="btn btn-info" href="<?php echo base_url().'/tipo_documento/'.$tipo_documento["id"] ?>"><i class="fas fa-eye"></i>  Mostrar</a>
     <a class="btn btn-warning" href="<?php echo base_url().'/tipo_documento/editar/'.$tipo_documento["id"] ?>"> <i class="fas fa-edit"></i>  Actualizar</a>

@@ -14,7 +14,7 @@
     <label for="nombre">Nombre de Talla:</label>
     <input type="text" name="nombre" >
     
-    <input class="btn btn-success my-4 " type="submit" value="Insertar Talla"> 
+    <button class="btn btn-success my-4 " type="submit"><i class="fas fa-plus-circle"></i> Insertar Talla </button>
     <a class="btn btn-danger my-4" href="<?php  echo base_url()."/talla/"  ?>"><i class="fas fa-arrow-left"></i>   Volver</a>
     </form>
     </div>

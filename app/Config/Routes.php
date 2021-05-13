@@ -111,6 +111,14 @@ $routes->get('pais/editar/(:num)','PaisController::edit/$1');
 $routes->post('pais/(:num)','PaisController::update/$1');
 $routes->get('pais/eliminar/(:num)','PaisController::destroy/$1');
 
+//Rol
+$routes->get('rol','RolController::index');
+$routes->get('rol/crear','RolController::create');
+$routes->post('rol','RolController::store');
+$routes->get('rol/(:num)','RolController::show/$1');
+$routes->get('rol/editar/(:num)','RolController::edit/$1');
+$routes->post('rol/(:num)','RolController::update/$1');
+$routes->get('rol/eliminar/(:num)','RolController::destroy/$1');
 
 
 

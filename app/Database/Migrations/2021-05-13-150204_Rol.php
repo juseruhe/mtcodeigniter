@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Pais extends Migration
+class Rol extends Migration
 {
 	public function up()
 	{
@@ -23,12 +23,12 @@ class Pais extends Migration
 			
     ]);
     $this->forge->addKey('id', TRUE);
-    $this->forge->createTable('paises');
+    $this->forge->createTable('roles');
 	}
 
 	public function down()
 	{
 		
-		$this->forge->dropTable('paises');
+		$this->forge->dropTable('roles');
 	}
 }

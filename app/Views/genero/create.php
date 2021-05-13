@@ -14,7 +14,7 @@
     <label for="nombre">Nombre de Género:</label>
     <input type="text" name="nombre" >
     
-    <input class="btn btn-success my-4 " type="submit" value="Insertar Género"> 
+    <button class="btn btn-success my-4 " type="submit"><i class="fas fa-plus-circle"></i> Insertar Género </button>
     <a class="btn btn-danger my-4" href="<?php  echo base_url()."/genero/"  ?>"><i class="fas fa-arrow-left"></i>   Volver</a>
     </form>
     </div>

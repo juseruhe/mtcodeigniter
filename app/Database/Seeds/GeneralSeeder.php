@@ -20,6 +20,7 @@ class GeneralSeeder extends Seeder
 		$this->call(TipoDocumentoSeeder::class);
 		$this->call(GeneroSeeder::class);
 		$this->call(PaisSeeder::class);
+		$this->call(RolSeeder::class);
 
 	}
 }

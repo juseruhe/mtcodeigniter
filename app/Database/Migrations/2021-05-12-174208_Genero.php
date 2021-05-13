@@ -28,7 +28,7 @@ class Genero extends Migration
 
 	public function down()
 	{
-		$this->forge->addKey('id', TRUE);
-		$this->forge->createTable('generos');
+		
+		$this->forge->dropTable('generos');
 	}
 }
