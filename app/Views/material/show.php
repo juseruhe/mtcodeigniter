@@ -35,7 +35,7 @@
     
     </table>
 
-    <a class="btn btn-danger" href="<?php echo base_url()."/material/"?>">Volver</a>
+    <a class="btn btn-danger" href="<?php echo base_url()."/material/"?>"><i class="fas fa-arrow-left"></i> Volver</a>
     </div>
     </div>
     </div>

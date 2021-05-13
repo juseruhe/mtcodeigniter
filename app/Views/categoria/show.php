@@ -35,7 +35,7 @@
     
     </table>
 
-    <a class="btn btn-danger" href="<?php echo base_url()."/categoria/"?>">Volver</a>
+    <a class="btn btn-danger" href="<?php echo base_url()."/categoria/"?>"><i class="fas fa-arrow-left"></i>  Volver</a>
     </div>
     </div>
     </div>
