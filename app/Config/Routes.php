@@ -102,6 +102,15 @@ $routes->get('genero/editar/(:num)','GeneroController::edit/$1');
 $routes->post('genero/(:num)','GeneroController::update/$1');
 $routes->get('genero/eliminar/(:num)','GeneroController::destroy/$1');
 
+// País
+$routes->get('pais','PaisController::index');
+$routes->get('pais/crear','PaisController::create');
+$routes->post('pais','PaisController::store');
+$routes->get('pais/(:num)','PaisController::show/$1');
+$routes->get('pais/editar/(:num)','PaisController::edit/$1');
+$routes->post('pais/(:num)','PaisController::update/$1');
+$routes->get('pais/eliminar/(:num)','PaisController::destroy/$1');
+
 
 
 

@@ -99,6 +99,17 @@
       </li>
 
 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <i class="fab fa-trade-federation"></i> País
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="<?php echo base_url()."/pais" ?>">Mostrar Paises</a>
+          <a class="dropdown-item" href="<?php echo base_url()."/pais/crear/" ?>">Crear País</a>
+      
+        </div>
+      </li>
+
 
 </ul>
 </nav>
