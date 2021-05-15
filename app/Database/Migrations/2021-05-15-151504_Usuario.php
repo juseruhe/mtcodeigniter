@@ -85,6 +85,13 @@ class Usuario extends Migration
 				'unsigned'       => TRUE
 				
 			],
+
+			'ciudad_id'          => [
+				'type'           => 'INT',
+				'constraint'     => 20,
+				'unsigned'       => TRUE
+				
+			],
 		
 			
     ]);
@@ -92,6 +99,7 @@ class Usuario extends Migration
 	$this->forge->addForeignKey('tipo_documento_id','tipos_documento','id');
 	$this->forge->addForeignKey('genero_id','generos','id');
 	$this->forge->addForeignKey('rol_id','roles','id');
+	$this->forge->addForeignKey('ciudad_id','ciudades','id');
     $this->forge->createTable('usuarios');
 	}
 

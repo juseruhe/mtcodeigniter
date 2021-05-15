@@ -20,7 +20,8 @@ class UsuarioSeeder extends Seeder
 			'contrasena' => '123',
 			'direccion' => 'Calle Usme',
 			'telefono' => '3115133173',
-			'rol_id' => '1'];
+			'rol_id' => '1',
+		    'ciudad_id' => 1  ];
 			
 	
 		
@@ -34,7 +35,9 @@ class UsuarioSeeder extends Seeder
 				'contrasena' => '123',
 				'direccion' => 'Carrera 80',
 				'telefono' => '3124845032',
-				'rol_id' => '1'];
+				'rol_id' => '1',
+				'ciudad_id' => 1
+			];
 				
 	
 			
@@ -48,7 +51,9 @@ class UsuarioSeeder extends Seeder
 					'contrasena' => '123',
 					'direccion' => 'Avenida Calabera',
 					'telefono' => '3174483117',
-					'rol_id' => '1'];
+					'rol_id' => '1',
+					'ciudad_id' => 1
+				];
 
 					$this->db->table('usuarios')->insert($data);
 		   $this->db->table('usuarios')->insert($data2);
