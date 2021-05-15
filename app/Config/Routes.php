@@ -131,6 +131,10 @@ $routes->post('ciudad/(:num)','CiudadController::update/$1');
 $routes->get('ciudad/eliminar/(:num)','CiudadController::destroy/$1');
 
 
+// Usuario
+$routes->get('usuario','UsuarioController::index');
+
+
 
 
 

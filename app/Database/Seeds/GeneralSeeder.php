@@ -22,6 +22,7 @@ class GeneralSeeder extends Seeder
 		$this->call(PaisSeeder::class);
 		$this->call(RolSeeder::class);
 		$this->call(CiudadSeeder::class);
+		$this->call(UsuarioSeeder::class);
 
 	}
 }
