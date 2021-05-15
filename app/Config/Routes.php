@@ -121,6 +121,16 @@ $routes->post('rol/(:num)','RolController::update/$1');
 $routes->get('rol/eliminar/(:num)','RolController::destroy/$1');
 
 
+//País
+$routes->get('ciudad','CiudadController::index');
+$routes->get('ciudad/crear','CiudadController::create');
+$routes->post('ciudad','CiudadController::store');
+$routes->get('ciudad/(:num)','CiudadController::show/$1');
+$routes->get('ciudad/editar/(:num)','CiudadController::edit/$1');
+$routes->post('ciudad/(:num)','CiudadController::update/$1');
+$routes->get('ciudad/eliminar/(:num)','CiudadController::destroy/$1');
+
+
 
 
 
