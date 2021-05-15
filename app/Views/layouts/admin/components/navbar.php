@@ -56,7 +56,7 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <i class="fab fa-trade-federation"></i> Clasificación
+         <i class="fab fa-keybase"></i> Clasificación
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="<?php echo base_url()."/clasificacion" ?>">Mostrar Clasificaciones</a>
@@ -93,7 +93,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="<?php echo base_url()."/genero" ?>">Mostrar Géneros</a>
-          <a class="dropdown-item" href="<?php echo base_url()."/genero/crear/" ?>">Crear Tipo Géneros</a>
+          <a class="dropdown-item" href="<?php echo base_url()."/genero/crear/" ?>">Crear Género</a>
       
         </div>
       </li>
