@@ -16,7 +16,7 @@ class Usuario extends Model
 	protected $protectFields        = true;
 	protected $allowedFields        = [
 	'tipo_documento_id','numero_documento','nombres','apellidos','genero_id','fecha_nacimiento',
-	'correo','contrasena','direccion','telefono','rol_id' 
+	'correo','contrasena','direccion','telefono','rol_id','ciudad_id' 
 	];
 
 	// Dates

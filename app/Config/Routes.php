@@ -133,6 +133,10 @@ $routes->get('ciudad/eliminar/(:num)','CiudadController::destroy/$1');
 
 // Usuario
 $routes->get('usuario','UsuarioController::index');
+$routes->get('usuario/crear','UsuarioController::create');
+$routes->post('usuario','UsuarioController::store');
+$routes->get('usuario/(:num)','UsuarioController::show/$1');
+$routes->get('usuario/editar/(:num)','UsuarioController::edit/$1');
 
 
 

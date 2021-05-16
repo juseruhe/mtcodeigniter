@@ -7,7 +7,7 @@
 
 <h3 class="text-center my-4 ">Usuarios</h3>
 
-<a href="#" class="btn btn-primary my-4"> <i class="fas fa-plus-circle"></i>    Crear Usuario</a>
+<a href="<?php echo base_url().'/usuario/crear' ?>" class="btn btn-primary my-4"> <i class="fas fa-plus-circle"></i>    Crear Usuario</a>
  
     <table class="table table-dark  text-center   ">
     <thead>
@@ -48,8 +48,8 @@
     <td><?php echo $usuario['rol'] ?></td>
     <td><?php echo $usuario['ciudad'] ?></td>
     <td>
-    <a class="btn btn-info" href="#"><i class="fas fa-eye"></i>  Mostrar</a>
-    <a class="btn btn-warning" href="#"> <i class="fas fa-edit"></i>  Actualizar</a>
+    <a class="btn btn-info" href="<?php echo base_url().'/usuario/'.$usuario["id"]  ?>"><i class="fas fa-eye"></i>  Mostrar</a>
+    <a class="btn btn-warning" href="<?php echo base_url().'/usuario/editar/'.$usuario["id"]  ?>"> <i class="fas fa-edit"></i>  Actualizar</a>
     <a class="btn btn-danger" href="#"> <i class="fas fa-eraser"></i>   Eliminar</a>
     </td>
    
