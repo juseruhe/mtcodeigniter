@@ -44,7 +44,7 @@
     <td><?php echo $usuario["correo"] ?></td>
     <td><?php echo $usuario["direccion"] ?></td>
     <td><?php echo $usuario["telefono"] ?></td>
-    <td><?php echo $usuario["correo"] ?></td>
+    <td><?php echo $usuario["rol"] ?></td>
     
    
    

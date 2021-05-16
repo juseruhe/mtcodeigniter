@@ -132,6 +132,17 @@
         </div>
       </li>
 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <i class="fab fa-trade-federation"></i> Usuario
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="<?php echo base_url()."/usuario" ?>">Mostrar Usuarios</a>
+          <a class="dropdown-item" href="<?php echo base_url()."/usuario/crear/" ?>">Crear Usuario</a>
+      
+        </div>
+      </li>
+
 
 </ul>
 </nav>
