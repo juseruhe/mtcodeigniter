@@ -9,11 +9,11 @@
    
 
     <div class="card-body text-center">
-    <form action="#" method="POST">
+    <form action="<?php echo base_url().'/usuario/'.$usuario["id"] ?>" method="POST">
 
     <label for="nombre">Tipo de Documento:</label>
     <select name="tipo_documento_id" class="form-control my-4">
-    <option value="<?php $usuario["tipo_documento_id"] ?>"><?php echo $usuario["tipo_documento"]  ?></option>
+    <option value="<?php echo $usuario["tipo_documento_id"] ?>"><?php echo $usuario["tipo_documento"]  ?></option>
     <?php  foreach($tipos_documento as $tipo_documento) 
      {  
           ?>
@@ -35,7 +35,7 @@
 
     <label for="nombre">Género:</label>
     <select name="genero_id" class="form-control my-4">
-    <option value="<?php $usuario["genero_id"] ?>"><?php echo $usuario["genero"]  ?></option> 
+    <option value="<?php echo $usuario["genero_id"] ?>"><?php echo $usuario["genero"]  ?></option> 
     <?php  foreach($generos as $genero)  
     {   
         ?>
@@ -51,6 +51,7 @@
 
     <label for="nombre">Ciudad:</label>
     <select name="ciudad_id" class="form-control my-4"> 
+    <option value="<?php echo $usuario["ciudad_id"] ?>"><?php echo $usuario["ciudad"]  ?></option> 
     <?php  foreach($ciudades as $ciudad)  
     {   
         ?>
@@ -75,6 +76,7 @@
 
     <label for="nombre">Rol:</label>
     <select name="rol_id" class="form-control my-4"> 
+    <option value="<?php echo $usuario["rol_id"] ?>"><?php echo $usuario["rol"]  ?></option> 
     <?php  foreach($roles as $rol)  
     {   
         ?>

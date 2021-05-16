@@ -137,6 +137,8 @@ $routes->get('usuario/crear','UsuarioController::create');
 $routes->post('usuario','UsuarioController::store');
 $routes->get('usuario/(:num)','UsuarioController::show/$1');
 $routes->get('usuario/editar/(:num)','UsuarioController::edit/$1');
+$routes->post('usuario/(:num)','UsuarioController::update/$1');
+$routes->get('usuario/eliminar/(:num)','UsuarioController::destroy/$1');
 
 
 

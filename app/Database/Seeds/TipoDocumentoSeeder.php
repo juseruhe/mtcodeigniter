@@ -16,7 +16,7 @@ class TipoDocumentoSeeder extends Seeder
 
         
           $data2 =[
-			'nombre' => 'Tarjeta de Ciudadanía',
+			'nombre' => 'Tarjeta de Identidad',
             'siglas' => 'TI'
 		  ];
         

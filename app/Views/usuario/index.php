@@ -50,7 +50,7 @@
     <td>
     <a class="btn btn-info" href="<?php echo base_url().'/usuario/'.$usuario["id"]  ?>"><i class="fas fa-eye"></i>  Mostrar</a>
     <a class="btn btn-warning" href="<?php echo base_url().'/usuario/editar/'.$usuario["id"]  ?>"> <i class="fas fa-edit"></i>  Actualizar</a>
-    <a class="btn btn-danger" href="#"> <i class="fas fa-eraser"></i>   Eliminar</a>
+    <a class="btn btn-danger" href="<?php echo base_url().'/usuario/eliminar/'.$usuario["id"]  ?>"> <i class="fas fa-eraser"></i>   Eliminar</a>
     </td>
    
     </tr>

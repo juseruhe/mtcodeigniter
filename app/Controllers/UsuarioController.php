@@ -78,7 +78,7 @@ class UsuarioController extends BaseController
 					'nombres' => $_POST["nombres"],
 					'apellidos' => $_POST["apellidos"],
 					'genero_id' => $_POST["genero_id"],
-					'fecha_nacimiento' => $_POST["genero_id"],
+					'fecha_nacimiento' => $_POST["fecha_nacimiento"],
 					'correo' => $_POST["correo"],
 					'contrasena' => $_POST["contrasena"],
 					'direccion' => $_POST["direccion"],
@@ -169,6 +169,44 @@ public function edit($id){
 
 
 	return view('usuario/edit',$datos);
+
+
+}
+
+public function update($id){
+
+	$modelo = new Usuario();
+
+		$datos = [
+			'tipo_documento_id' => $_POST["tipo_documento_id"],
+					'numero_documento' => $_POST["numero_documento"],
+					'nombres' => $_POST["nombres"],
+					'apellidos' => $_POST["apellidos"],
+					'genero_id' => $_POST["genero_id"],
+					'fecha_nacimiento' => $_POST["fecha_nacimiento"],
+					'correo' => $_POST["correo"],
+					'contrasena' => $_POST["contrasena"],
+					'direccion' => $_POST["direccion"],
+					'telefono' => $_POST["telefono"],
+					'rol_id' => $_POST["rol_id"],
+					'ciudad_id' => $_POST["ciudad_id"]
+		];
+
+		$modelo->where('id',$id)->update($id,$datos);
+
+
+		return redirect()->to(base_url().'/usuario/'.$id);
+
+
+}
+
+public function destroy($id){
+
+	$modelo = new Usuario();
+
+	$modelo->where('id',$id)->delete();
+
+	return redirect()->to(base_url().'/usuario');
 
 
 }
