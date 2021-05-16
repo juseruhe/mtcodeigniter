@@ -46,7 +46,7 @@
     <td><?php echo $usuario['direccion'] ?></td>
     <td><?php echo $usuario['telefono'] ?></td>
     <td><?php echo $usuario['rol'] ?></td>
-    <td><?php echo $usuario['ciudad'] ?></td>
+    <td><?php echo $usuario['ciudad'].','.$usuario["pais"] ?></td>
     <td>
     <a class="btn btn-info" href="<?php echo base_url().'/usuario/'.$usuario["id"]  ?>"><i class="fas fa-eye"></i>  Mostrar</a>
     <a class="btn btn-warning" href="<?php echo base_url().'/usuario/editar/'.$usuario["id"]  ?>"> <i class="fas fa-edit"></i>  Actualizar</a>

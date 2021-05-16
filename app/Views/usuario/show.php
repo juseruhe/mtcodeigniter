@@ -40,7 +40,7 @@
     <td><?php echo $usuario["apellidos"] ?></td>
     <td><?php echo $usuario["genero"] ?></td>
     <td><?php echo $usuario["fecha_nacimiento"] ?></td>
-    <td><?php echo $usuario["ciudad"] ?></td>
+    <td><?php echo $usuario["ciudad"].','.$usuario["pais"] ?></td>
     <td><?php echo $usuario["correo"] ?></td>
     <td><?php echo $usuario["direccion"] ?></td>
     <td><?php echo $usuario["telefono"] ?></td>

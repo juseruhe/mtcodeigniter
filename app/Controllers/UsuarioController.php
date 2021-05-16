@@ -11,6 +11,8 @@ use App\Models\Genero;
 use App\Models\Rol;
 use App\Models\Usuario;
 
+use App\Models\Pais;
+
 class UsuarioController extends BaseController
 {
 	public function index()
@@ -23,12 +25,13 @@ class UsuarioController extends BaseController
 		usuarios.correo,usuarios.contrasena,
 		usuarios.direccion,usuarios.telefono,usuarios.rol_id,usuarios.ciudad_id,
 		tipos_documento.nombre tipo_documento, generos.nombre genero,
-		roles.nombre rol, ciudades.nombre ciudad')
+		roles.nombre rol, ciudades.nombre ciudad,paises.nombre pais')
 		->join('tipos_documento','usuarios.tipo_documento_id=
 		tipos_documento.id','inner')
 		->join('generos','usuarios.genero_id=generos.id','inner')
 		->join('roles','usuarios.rol_id=roles.id','inner')
 		->join('ciudades','usuarios.ciudad_id=ciudades.id','inner')
+		->join('paises','ciudades.pais_id=paises.id','inner')
 		->findAll();
 
 		//componentes
@@ -112,12 +115,13 @@ class UsuarioController extends BaseController
 		usuarios.correo,usuarios.contrasena,
 		usuarios.direccion,usuarios.telefono,usuarios.rol_id,usuarios.ciudad_id,
 		tipos_documento.nombre tipo_documento, generos.nombre genero,
-		roles.nombre rol, ciudades.nombre ciudad')
+		roles.nombre rol, ciudades.nombre ciudad,paises.nombre pais')
 		->join('tipos_documento','usuarios.tipo_documento_id=
 		tipos_documento.id','inner')
 		->join('generos','usuarios.genero_id=generos.id','inner')
 		->join('roles','usuarios.rol_id=roles.id','inner')
 		->join('ciudades','usuarios.ciudad_id=ciudades.id','inner')
+		->join('paises','ciudades.pais_id=paises.id','inner')
 		->where('usuarios.id',$id)
 		->first();
 
