@@ -42,4 +42,13 @@ class Usuario extends Model
 	protected $afterFind            = [];
 	protected $beforeDelete         = [];
 	protected $afterDelete          = [];
+
+	public function login($datos){
+
+		$usuario = $this->db->table('usuarios');
+
+       $usuario->where($datos);
+
+	   return $usuario->get()->getResultArray();
+	}
 }
