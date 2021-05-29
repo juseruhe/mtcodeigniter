@@ -7,6 +7,8 @@
 
 <h3 class="text-center my-4 ">Categorias</h3>
 
+
+
 <a href="<?php echo base_url()."/categoria/crear" ?>" class="btn btn-primary my-4"> <i class="fas fa-plus-circle"></i>    Crear Categoría</a>
  
     <table class="table table-dark  text-center   ">

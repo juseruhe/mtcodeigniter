@@ -143,6 +143,8 @@ $routes->get('usuario/eliminar/(:num)','UsuarioController::destroy/$1');
 //Login
 $routes->get('login','LoginController::index');
 $routes->post('login','LoginController::loggedin');
+$routes->post('loggedout/(:any)','LoginController::loggedout/$1');
+
 
 // Admin
 $routes->get('admin','AdminController::index');

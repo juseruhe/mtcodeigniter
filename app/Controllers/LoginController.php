@@ -6,6 +6,8 @@ use App\Controllers\BaseController;
 
 use App\Models\Usuario;
 
+use CodeIgniter\Config\Services;
+
 class LoginController extends BaseController
 {
 	public function index()
@@ -35,6 +37,8 @@ class LoginController extends BaseController
 		->where('contrasena',$_POST["contrasena"])
 		->findAll();
 
+		
+
 		if(count($datos["usuario"]) > 0) {
 
 			$datos["usuario"] = $modelo->select('usuarios.correo,usuarios.contrasena')
@@ -42,6 +46,8 @@ class LoginController extends BaseController
 			->where('contrasena',$_POST["contrasena"])
 			->where('rol_id',1)
 			->findAll();
+			
+			
 			
 			if(count($datos["usuario"]) > 0){
 
@@ -56,9 +62,17 @@ class LoginController extends BaseController
 		$datos["navbar"] = view('layouts/admin/components/navbar');
 		$datos["footer"] = view('layouts/admin/components/footer');
 
-	 
 
-                return view('admin/index',$datos);
+		    $datos["session"] = session();
+
+			$data = [ 
+				"correo" => $_POST["correo"]
+			];
+
+		 $datos["session"]->set($data);
+
+		 
+	         return view('admin/index',$datos);
 			}
 		}
    
@@ -79,6 +93,17 @@ class LoginController extends BaseController
 
 		if(count($datosUsuario) > 0 )
 		*/
+
+	}
+
+	public function loggedout($correo){
+
+		$session = session();
+
+		$session->remove($correo);
+
+		return redirect()->to(base_url(),'/login');
+
 
 	}
 }
