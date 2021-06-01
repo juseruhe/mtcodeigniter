@@ -57,11 +57,8 @@ $datos = [
 		
 		$crud->insert($datos);
 
-		
 
-
-
-		return redirect()->to(base_url().'/material');
+		return redirect()->to(base_url().'/material')->with('mensaje','Creado Correctamente');
 
 	}
 
@@ -131,7 +128,8 @@ return view('material/show',$datos);
 
 	$crud->where('id',$id)->delete();
 
-    return redirect()->to(base_url().'/material');
+    return redirect()->to(base_url().'/material')
+	->with('mensaje','Eliminado Correctamente');
 
    }
 

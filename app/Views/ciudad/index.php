@@ -8,6 +8,32 @@
 
 <h3 class="text-center my-4 ">Ciudades</h3>
 
+<!-- Alerta -->
+<?php 
+if(session('mensaje') == "Creado Correctamente") {
+?>
+<div class="alert alert-success" role="alert">
+<i class="fas fa-check-square"></i> <?php echo session('mensaje') ?>
+<button type="button" class="close" data-dismiss="alert" aria-label="Close" >
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<?php
+}
+else if(session('mensaje') == "Eliminado Correctamente"){
+?>
+<div class="alert alert-danger" role="alert">
+<i class="fas fa-times-check"></i> <?php echo session('mensaje') ?>
+<button type="button" class="close" data-dismiss="alert" aria-label="Close" >
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<?php
+}else {
+}
+?>
+<!-- Fín de Alerta  -->
+
 <a href="<?php echo base_url().'/ciudad/crear' ?>" class="btn btn-primary my-4"> <i class="fas fa-plus-circle"></i>    Crear Ciudad</a>
  
     <table class="table table-dark  text-center   ">

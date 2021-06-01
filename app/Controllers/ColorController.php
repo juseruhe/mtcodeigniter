@@ -46,7 +46,7 @@ class ColorController extends BaseController
 
 		$modelo->insert($datos);
 
-		return redirect()->to(base_url().'/color');
+		return redirect()->to(base_url().'/color')->with('mensaje','Creado Correctamente');
 	}
 
 	public function show($id){
@@ -98,6 +98,6 @@ public function destroy($id){
 
 	$modelo->where('id',$id)->delete();
 
-	return redirect()->to(base_url().'/color/');
+	return redirect()->to(base_url().'/color/')->with('mensaje','Eliminado Correctamente');
 }
 }

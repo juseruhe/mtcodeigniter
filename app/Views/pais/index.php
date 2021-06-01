@@ -9,7 +9,7 @@
 
 <a href="<?php echo base_url().'/pais/crear' ?>" class="btn btn-primary my-4"> <i class="fas fa-plus-circle"></i>    Crear País</a>
  
-    <table class="table table-dark  text-center   ">
+    <table class="table table-dark  text-center  ">
     <thead>
     <tr>
     <th>#</th>

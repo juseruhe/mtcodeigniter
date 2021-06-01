@@ -56,7 +56,7 @@ class CiudadController extends BaseController
 
 		$modelo->insert($datos);
 
-		return redirect()->to(base_url().'/ciudad');
+		return redirect()->to(base_url().'/ciudad')->with('mensaje','Creado Correctamente');
 	}
 
 	public function show($id){
@@ -127,6 +127,6 @@ class CiudadController extends BaseController
 
 		$modelo->where('id',$id)->delete();
 
-		return redirect()->to(base_url().'/ciudad');
+		return redirect()->to(base_url().'/ciudad')->with('mensaje','Eliminado Correctamente');
 	}
 }

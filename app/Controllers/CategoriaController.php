@@ -52,7 +52,7 @@ class CategoriaController extends BaseController
 	$modelo->insert($datos);
 
 
-	return redirect()->to(base_url().'/categoria');
+	return redirect()->to(base_url().'/categoria')->with('mensaje','Creado Correctamente');
 
 
 	}
@@ -125,7 +125,7 @@ class CategoriaController extends BaseController
 
 	   $modelo->where('id',$id)->delete();
 
-	   return redirect()->to(base_url().'/categoria');
+	   return redirect()->to(base_url().'/categoria')->with('mensaje','Eliminado Correctamente');
 
 
 	}
