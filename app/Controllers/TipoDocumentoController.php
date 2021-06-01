@@ -46,7 +46,7 @@ class TipoDocumentoController extends BaseController
 
 		$modelo->insert($datos);
 
-		return redirect()->to(base_url().'/tipo_documento');
+		return redirect()->to(base_url().'/tipo_documento')->with('mensaje','Creado Correctamente');
 
 
 	}
@@ -105,6 +105,6 @@ class TipoDocumentoController extends BaseController
 
 		$modelo->where('id',$id)->delete();
 
-		return redirect()->to(base_url().'/tipo_documento');
+		return redirect()->to(base_url().'/tipo_documento')->with('mensaje','Eliminado Correctamente');
 	}
 }

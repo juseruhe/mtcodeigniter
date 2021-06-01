@@ -49,7 +49,7 @@ class TallaController extends BaseController
 		$modelo->insert($datos);
 
 
-		return redirect()->to(base_url().'/talla');
+		return redirect()->to(base_url().'/talla')->with('mensaje','Creado Correctamente');
 
 		
 	}
@@ -109,7 +109,7 @@ class TallaController extends BaseController
 
 		$modelo->where('id',$id)->delete();
 
-		return redirect()->to(base_url().'/talla');
+		return redirect()->to(base_url().'/talla')->with('mensaje','Eliminado Correctamente');
 	}
 
 	

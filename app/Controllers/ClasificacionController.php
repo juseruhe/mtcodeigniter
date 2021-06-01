@@ -48,7 +48,7 @@ class ClasificacionController extends BaseController
 
 		$modelo->insert($datos);
 
-		return redirect()->to(base_url().'/clasificacion');
+		return redirect()->to(base_url().'/clasificacion')->with('mensaje','Creado Correctamente');
 	}
 
 	public function show($id){
@@ -103,6 +103,6 @@ class ClasificacionController extends BaseController
 
 		$modelo->where('id',$id)->delete();
 
-		return redirect()->to(base_url().'/clasificacion');
+		return redirect()->to(base_url().'/clasificacion')->with('mensaje','Eliminado Correctamente');
 	}
 }

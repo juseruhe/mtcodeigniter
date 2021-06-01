@@ -46,7 +46,7 @@ class GeneroController extends BaseController
 
 		$modelo->insert($datos);
 
-		return redirect()->to(base_url().'/genero');
+		return redirect()->to(base_url().'/genero')->with('mensaje','Creado Correctamente');
 	}
 
 	public function show($id){
@@ -104,6 +104,6 @@ class GeneroController extends BaseController
 		$modelo->where('id',$id)->delete();
 
 
-		return redirect()->to(base_url().'/genero');
+		return redirect()->to(base_url().'/genero')->with('mensaje','Eliminado Correctamente');
 	}
 }

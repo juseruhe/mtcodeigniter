@@ -41,7 +41,7 @@ class RolController extends BaseController
 
 		$modelo->insert($datos);
 
-		return redirect()->to(base_url().'/rol');
+		return redirect()->to(base_url().'/rol')->with('mensaje','Creado Correctamente');
 	}
 
 	public function show($id){
@@ -92,6 +92,6 @@ class RolController extends BaseController
 
 		$modelo->where('id',$id)->delete();
 
-		return redirect()->to(base_url().'/rol');
+		return redirect()->to(base_url().'/rol')->with('mensaje','Eliminado Correctamente');
 	}
 }

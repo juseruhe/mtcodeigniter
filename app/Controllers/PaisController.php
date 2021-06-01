@@ -45,7 +45,7 @@ class PaisController extends BaseController
 
 		$modelo->insert($datos);
 
-		return redirect()->to(base_url().'/pais');
+		return redirect()->to(base_url().'/pais')->with('mensaje','Creado Correctamente');
 	}
 
 	public function show($id){
@@ -100,6 +100,6 @@ class PaisController extends BaseController
 
 		$modelo->where('id',$id)->delete();
 
-		return redirect()->to(base_url().'/pais');
+		return redirect()->to(base_url().'/pais')->with('mensaje','Eliminado Correctamente');
 	}
 }

@@ -60,7 +60,7 @@ class UsuarioController extends BaseController
         $datos["generos"] = $modelo2->findAll();
 
 		$modelo3 = new Rol();
-		$datos["roles"] = $modelo3->findAll();
+		$datos["roles"] = $modelo3->where('id',1)->findAll();
 
 		$modelo4 = new Ciudad();
 		$datos["ciudades"] = $modelo4->findAll();
@@ -93,7 +93,7 @@ class UsuarioController extends BaseController
 		$modelo->insert($datos);
 
 
-		return redirect()->to(base_url().'/usuario');
+		return redirect()->to(base_url().'/usuario')->with('mensaje','Creado Correctamente');
 
 
 	}
@@ -210,7 +210,53 @@ public function destroy($id){
 
 	$modelo->where('id',$id)->delete();
 
-	return redirect()->to(base_url().'/usuario');
+	return redirect()->to(base_url().'/usuario')->with('mensaje','Eliminado Correctamente');
+
+
+}
+
+public function role($id){
+
+	//componentes
+
+	$datos["navbar"] = view('layouts/admin/components/navbar');
+	$datos["footer"] = view('layouts/admin/components/footer');
+
+
+	// Consulta
+
+	$modelo2 = new Usuario();
+
+	$datos["usuario"] = $modelo2->select('usuarios.id,usuarios.rol_id,roles.nombre rol')
+	->join('roles','usuarios.rol_id=roles.id','inner')
+	->where('usuarios.id',$id)
+	->first();
+
+
+	$modelo = new Rol();
+
+	$datos["roles"] = $modelo->findAll();
+
+
+	return view('usuario/role',$datos);
+
+
+}
+
+public function roles($id){
+
+	$modelo = new Usuario();
+
+		$datos = [
+			
+					'rol_id' => $_POST["rol_id"],
+					
+		];
+
+		$modelo->where('id',$id)->update($id,$datos);
+
+
+		return redirect()->to(base_url().'/usuario/'.$id);
 
 
 }

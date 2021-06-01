@@ -78,7 +78,7 @@ class LoginController extends BaseController
    
 		else {
 
-			return view('login/index',$datos);
+			return redirect()->to(base_url().'/login')->with('mensaje','Correo y Contraseña Incorrecta Compruebe de Nuevo');
 		}
 
 

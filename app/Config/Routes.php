@@ -139,6 +139,8 @@ $routes->get('usuario/(:num)','UsuarioController::show/$1');
 $routes->get('usuario/editar/(:num)','UsuarioController::edit/$1');
 $routes->post('usuario/(:num)','UsuarioController::update/$1');
 $routes->get('usuario/eliminar/(:num)','UsuarioController::destroy/$1');
+$routes->get('usuario/rol/(:num)','UsuarioController::role/$1');
+$routes->post('usuario/role/(:num)','UsuarioController::roles/$1');
 
 //Login
 $routes->get('login','LoginController::index');
