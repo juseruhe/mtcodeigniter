@@ -74,17 +74,7 @@
     <label for="nombre">Teléfono:</label>
     <input type="number" name="telefono" class="form-control my-4" value="<?php echo $usuario["telefono"]?>" >
 
-    <label for="nombre">Rol:</label>
-    <select name="rol_id" class="form-control my-4"> 
-    <option value="<?php echo $usuario["rol_id"] ?>"><?php echo $usuario["rol"]  ?></option> 
-    <?php  foreach($roles as $rol)  
-    {   
-        ?>
-    <option value="<?php echo $rol["id"] ?>"><?php echo $rol["nombre"]  ?></option>
-    <?php 
- } 
- ?>
-    </select>
+  
     
     <button class="btn btn-success my-4" type="submit"><i class="fas fa-redo-alt"></i> Actualizar Usuario </button>
     <a class="btn btn-danger my-4" href="<?php  echo base_url()."/usuario/"  ?>"><i class="fas fa-arrow-left"></i>   Volver</a>

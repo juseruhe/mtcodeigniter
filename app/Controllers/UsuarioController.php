@@ -145,12 +145,10 @@ public function edit($id){
 	usuarios.apellidos,usuarios.genero_id,usuarios.fecha_nacimiento,
 	usuarios.correo,usuarios.contrasena,
 	usuarios.direccion,usuarios.telefono,usuarios.rol_id,usuarios.ciudad_id,
-	tipos_documento.nombre tipo_documento, generos.nombre genero,
-	roles.nombre rol, ciudades.nombre ciudad')
+	tipos_documento.nombre tipo_documento, generos.nombre genero,ciudades.nombre ciudad')
 	->join('tipos_documento','usuarios.tipo_documento_id=
 	tipos_documento.id','inner')
 	->join('generos','usuarios.genero_id=generos.id','inner')
-	->join('roles','usuarios.rol_id=roles.id','inner')
 	->join('ciudades','usuarios.ciudad_id=ciudades.id','inner')
 	->where('usuarios.id',$id)
 	->first();
@@ -162,9 +160,6 @@ public function edit($id){
 
 		$modelo3 = new Genero();
         $datos["generos"] = $modelo3->findAll();
-
-		$modelo4 = new Rol();
-		$datos["roles"] = $modelo4->findAll();
 
 		$modelo5 = new Ciudad();
 		$datos["ciudades"] = $modelo5->findAll();
@@ -192,7 +187,6 @@ public function update($id){
 					'contrasena' => $_POST["contrasena"],
 					'direccion' => $_POST["direccion"],
 					'telefono' => $_POST["telefono"],
-					'rol_id' => $_POST["rol_id"],
 					'ciudad_id' => $_POST["ciudad_id"]
 		];
 
