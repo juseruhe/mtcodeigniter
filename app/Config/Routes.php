@@ -142,6 +142,16 @@ $routes->get('usuario/eliminar/(:num)','UsuarioController::destroy/$1');
 $routes->get('usuario/rol/(:num)','UsuarioController::role/$1');
 $routes->post('usuario/role/(:num)','UsuarioController::roles/$1');
 
+//Producto
+$routes->get('producto','ProductoController::index');
+$routes->get('producto/crear','ProductoController::create');
+$routes->post('producto','ProductoController::store');
+$routes->get('producto','ProductoController::index');
+$routes->get('producto/(:num)','ProductoController::show/$1');
+$routes->get('producto/editar/(:num)','ProductoController::edit/$1');
+
+
+
 //Login
 $routes->get('login','LoginController::index');
 $routes->post('login','LoginController::loggedin');
