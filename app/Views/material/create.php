@@ -12,7 +12,7 @@
     <form action="<?php echo base_url().'/material' ?>" method="POST">
 
     <label for="nombre">Nombre de Material:</label>
-    <input type="text" name="nombre" >
+    <input type="text" name="nombre" required >
     
     <button class="btn btn-success my-4 " type="submit"><i class="fas fa-plus-circle"></i> Insertar Material</button>
     <a class="btn btn-danger my-4" href="<?php  echo base_url()."/material/"  ?>"><i class="fas fa-arrow-left"></i>   Volver</a>

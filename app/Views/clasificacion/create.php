@@ -12,7 +12,7 @@
     <form action="<?php echo base_url().'/clasificacion'  ?>" method="POST">
 
     <label for="nombre">Nombre de Clasificación:</label>
-    <input type="text" name="nombre" >
+    <input type="text" name="nombre" required >
     
     <button class="btn btn-success my-4 " type="submit"><i class="fas fa-plus-circle"></i> Insertar Clasificación </button>
     <a class="btn btn-danger my-4" href="<?php  echo base_url()."/clasificacion/"  ?>"><i class="fas fa-arrow-left"></i>   Volver</a>

@@ -12,10 +12,10 @@
     <form action="<?php echo base_url().'/ciudad' ?>" method="POST">
 
     <label for="nombre">Nombre de Ciudad:</label>
-    <input type="text" name="nombre" >
+    <input type="text" name="nombre" required >
     
     <label for="nombre">País:</label>
-    <select name="pais_id" >
+    <select name="pais_id" required>
     <?php 
     foreach($paises as $pais){
     ?>

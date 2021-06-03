@@ -12,7 +12,7 @@
     <form action="<?php echo base_url().'/usuario' ?>" method="POST">
 
     <label for="nombre">Tipo de Documento:</label>
-    <select name="tipo_documento_id" class="form-control my-4">
+    <select name="tipo_documento_id" class="form-control my-4" required>
     <?php  foreach($tipos_documento as $tipo_documento) 
      {  
           ?>
@@ -24,16 +24,16 @@
 
 
     <label for="nombre">Número de Documento:</label>
-    <input type="number" name="numero_documento" class="form-control my-4" >
+    <input type="number" name="numero_documento" class="form-control my-4" required>
 
     <label for="nombre">Nombres:</label>
-    <input type="text" name="nombres" class="form-control my-4">
+    <input type="text" name="nombres" class="form-control my-4" required>
 
     <label for="nombre">Apellidos:</label>
-    <input type="text" name="apellidos" class="form-control my-4" >
+    <input type="text" name="apellidos" class="form-control my-4" required >
 
     <label for="nombre">Género:</label>
-    <select name="genero_id" class="form-control my-4"> 
+    <select name="genero_id" class="form-control my-4" required> 
     <?php  foreach($generos as $genero)  
     {   
         ?>
@@ -44,11 +44,11 @@
     </select>
 
     <label for="nombre">Fecha de Nacimiento:</label>
-    <input type="date" name="fecha_nacimiento" class="form-control my-4" >
+    <input type="date" name="fecha_nacimiento" class="form-control my-4" required >
 
 
     <label for="nombre">Ciudad:</label>
-    <select name="ciudad_id" class="form-control my-4"> 
+    <select name="ciudad_id" class="form-control my-4" required> 
     <?php  foreach($ciudades as $ciudad)  
     {   
         ?>
@@ -59,20 +59,20 @@
     </select>
 
 <label for="nombre">Correo:</label>
-    <input type="email" name="correo" class="form-control my-4" >
+    <input type="email" name="correo" class="form-control my-4" required >
 
     <label for="nombre">Contraseña:</label>
-    <input type="password" name="contrasena" class="form-control my-4" >
+    <input type="password" name="contrasena" class="form-control my-4" required>
 
 
     <label for="nombre">Dirección:</label>
-    <input type="text" name="direccion" class="form-control my-4" >
+    <input type="text" name="direccion" class="form-control my-4" required>
 
     <label for="nombre">Teléfono:</label>
-    <input type="number" name="telefono" class="form-control my-4" >
+    <input type="number" name="telefono" class="form-control my-4" required>
 
     <label for="nombre">Rol:</label>
-    <select name="rol_id" class="form-control my-4"> 
+    <select name="rol_id" class="form-control my-4" required> 
     <?php  foreach($roles as $rol)  
     {   
         ?>
