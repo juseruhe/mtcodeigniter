@@ -23,7 +23,7 @@
 
 <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <i class="fab fa-trade-federation"></i> Material
+         <i class="fab fa-cotton-bureau"></i><i class="fas fa-recycle"></i> Material
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="<?php echo base_url()."/material" ?>">Mostrar Materiales</a>
@@ -35,7 +35,7 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <i class="fab fa-trade-federation"></i> Categoría
+         <i class="fas fa-user-astronaut"></i><i class="fas fa-user-tie"></i> Categoría
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="<?php echo base_url()."/categoria" ?>">Mostrar Categorias</a>
@@ -46,7 +46,7 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <i class="fab fa-trade-federation"></i> Color
+         <i class="fas fa-palette"></i> Color
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="<?php echo base_url()."/color" ?>">Mostrar Colores</a>
@@ -57,7 +57,7 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <i class="fab fa-keybase"></i> Clasificación
+         <i class="fas fa-female"></i><i class="fas fa-male"></i><i class="fas fa-child"></i>  Clasificación
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="<?php echo base_url()."/clasificacion" ?>">Mostrar Clasificaciones</a>
@@ -68,7 +68,7 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <i class="fab fa-trade-federation"></i> Talla
+         <i class="fas fa-ruler-vertical"></i><i class="fas fa-male"></i>  Talla
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="<?php echo base_url()."/talla" ?>">Mostrar Tallas</a>
@@ -79,7 +79,7 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <i class="fab fa-trade-federation"></i> Tipo Documento
+         <i class="fas fa-id-card"></i> Tipo Documento
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="<?php echo base_url()."/tipo_documento" ?>">Mostrar Tipos Documento</a>
@@ -90,7 +90,7 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <i class="fab fa-trade-federation"></i> Género
+         <i class="fas fa-restroom"></i> Género
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="<?php echo base_url()."/genero" ?>">Mostrar Géneros</a>
@@ -102,7 +102,7 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <i class="fab fa-trade-federation"></i> País
+         <i class="fas fa-flag"></i> País
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="<?php echo base_url()."/pais" ?>">Mostrar Paises</a>
@@ -113,7 +113,7 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <i class="fab fa-trade-federation"></i> Rol
+         <i class="fas fa-user-tag"></i> Rol
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="<?php echo base_url()."/rol" ?>">Mostrar Roles</a>
@@ -124,7 +124,7 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <i class="fab fa-trade-federation"></i> Ciudad
+        <i class="fas fa-building"></i> Ciudad
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="<?php echo base_url()."/ciudad" ?>">Mostrar Ciudades</a>
@@ -135,7 +135,7 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <i class="fab fa-trade-federation"></i> Usuario
+         <i class="fas fa-user"></i> Usuario
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="<?php echo base_url()."/usuario" ?>">Mostrar Usuarios</a>
@@ -144,6 +144,16 @@
         </div>
       </li>
 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <i class="fas fa-box-open"></i>  Producto
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="<?php echo base_url()."/producto" ?>">Mostrar Productos</a>
+          <a class="dropdown-item" href="<?php echo base_url()."/producto/crear/" ?>">Crear Producto</a>
+      
+        </div>
+      </li>
       
 
 
