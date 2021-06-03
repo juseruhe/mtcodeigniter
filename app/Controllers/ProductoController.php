@@ -181,4 +181,37 @@ class ProductoController extends BaseController
 
 
 	}
+
+	public function update($id){
+
+		$modelo = new Producto();
+
+		
+        $datos = [
+			'nombre' =>  $_POST["nombre"],
+			'talla_id' => $_POST["talla_id"],
+			'color_id' => $_POST["color_id"],
+			'material_id' => $_POST["material_id"],
+			'categoria_id' => $_POST["categoria_id"],
+			'clasificacion_id' => $_POST["clasificacion_id"],
+			'valor' => $_POST["valor"],
+			'cantidad' => $_POST["cantidad"]
+		];
+
+		$modelo->where('id',$id)->update($id,$datos);
+
+
+		return redirect()->to(base_url().'/producto/'.$id);
+
+
+	}
+
+	public function destroy($id){
+
+	   $modelo = new Producto();
+
+	   $modelo->where('id',$id)->delete();
+
+	   return redirect()->to(base_url().'/producto')->with('mensaje','Eliminado Correctamente');
+	}
 }

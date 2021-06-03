@@ -149,7 +149,8 @@ $routes->post('producto','ProductoController::store');
 $routes->get('producto','ProductoController::index');
 $routes->get('producto/(:num)','ProductoController::show/$1');
 $routes->get('producto/editar/(:num)','ProductoController::edit/$1');
-
+$routes->post('producto/(:num)','ProductoController::update/$1');
+$routes->get('producto/eliminar/(:num)','ProductoController::destroy/$1');
 
 
 //Login
