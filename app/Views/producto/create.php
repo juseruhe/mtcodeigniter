@@ -9,7 +9,7 @@
    
 
     <div class="card-body text-center">
-    <form action="<?php echo base_url().'/producto' ?>" method="POST">
+    <form action="<?php echo base_url().'/producto' ?>" method="POST" enctype="multipart/form-data">
 
     <label for="nombre">Nombre:</label>
     <input type="text" name="nombre" class="form-control my-4" required >

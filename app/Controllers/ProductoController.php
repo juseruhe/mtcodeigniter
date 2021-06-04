@@ -84,9 +84,40 @@ class ProductoController extends BaseController
 
 	public function store(){
 
+
+		
 		$modelo = new Producto();
 
+		if($_FILES["imagen"] ["name"] != null)
+
+		{
+
+			//copy($_FILES["imagen"]["tmp_name"],"../public/imagenes/".$_FILES["imagen"]["name"]);
+			move_uploaded_file($_FILES["imagen"]["tmp_name"],"../public/imagenes/".$_FILES["imagen"]["name"]);
+
+			$imagen = $_FILES["imagen"]["name"];
+
+		
+			
         $datos = [
+			'nombre' =>  $_POST["nombre"],
+            'imagen' =>  $imagen,
+			'talla_id' => $_POST["talla_id"],
+			'color_id' => $_POST["color_id"],
+			'material_id' => $_POST["material_id"],
+			'categoria_id' => $_POST["categoria_id"],
+			'clasificacion_id' => $_POST["clasificacion_id"],
+			'valor' => $_POST["valor"],
+			'cantidad' => $_POST["cantidad"]
+		];
+
+		$modelo->insert($datos);
+
+	}
+
+	else {
+
+		$datos = [
 			'nombre' =>  $_POST["nombre"],
 			'talla_id' => $_POST["talla_id"],
 			'color_id' => $_POST["color_id"],
@@ -98,6 +129,8 @@ class ProductoController extends BaseController
 		];
 
 		$modelo->insert($datos);
+
+	}
 
 		return redirect()->to(base_url().'/producto')->with('mensaje','Creado Correctamente');
 

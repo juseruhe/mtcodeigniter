@@ -61,7 +61,7 @@ else if(session('mensaje') == "Eliminado Correctamente"){
    
     <td><?php echo $producto['id'] ?></td>
     <td><?php echo $producto['nombre'] ?></td>
-    <td><img src="<?php echo $producto["imagen"] ?>" alt="<?php echo  $producto['nombre'] ?>"></td>
+    <td><img src="<?php echo base_url().'/imagenes/'.$producto["imagen"] ?>" alt="<?php echo  $producto['nombre'] ?>"></td>
     <td><?php echo $producto['talla'] ?></td>
     <td><?php echo $producto['color'] ?></td>
     <td><?php echo $producto['material'] ?></td>
