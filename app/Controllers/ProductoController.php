@@ -84,7 +84,6 @@ class ProductoController extends BaseController
 
 	public function store(){
 
-
 		
 		$modelo = new Producto();
 
@@ -92,12 +91,16 @@ class ProductoController extends BaseController
 
 		{
 
-			//copy($_FILES["imagen"]["tmp_name"],"../public/imagenes/".$_FILES["imagen"]["name"]);
-			move_uploaded_file($_FILES["imagen"]["tmp_name"],"../public/imagenes/".$_FILES["imagen"]["name"]);
+			
+			$caracteres = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
-			$imagen = $_FILES["imagen"]["name"];
+		  $imagen = substr(str_shuffle($caracteres),0,15).'.jpg';
 
-		
+		  //copy($_FILES["imagen"]["tmp_name"],"../public/imagenes/".$_FILES["imagen"]["name"]);
+			move_uploaded_file($_FILES["imagen"]["tmp_name"],"../public/imagenes/".$imagen);
+
+
+		  
 			
         $datos = [
 			'nombre' =>  $_POST["nombre"],

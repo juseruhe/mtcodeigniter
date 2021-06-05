@@ -15,7 +15,7 @@ class Producto extends Model
 	protected $useSoftDelete        = false;
 	protected $protectFields        = true;
 	protected $allowedFields        = [
-	'nombre','talla_id','color_id','material_id','categoria_id',
+ 'nombre','imagen','talla_id','color_id','material_id','categoria_id',
 'clasificacion_id','valor','cantidad'  
 	];
 

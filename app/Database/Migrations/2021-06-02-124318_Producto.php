@@ -31,14 +31,14 @@ class Producto extends Migration
 
        'talla_id'          => [
                 'type'           => 'INT',
-                'constraint'     => 255,
+                'constraint'     => 20,
 				'unsigned'       => TRUE
                 
 			],
 
 			'color_id'          => [
                 'type'           => 'INT',
-                'constraint'     => 255,
+                'constraint'     => 20,
 				'unsigned'       => TRUE
                 
 			],
@@ -60,7 +60,7 @@ class Producto extends Migration
 
 			'clasificacion_id'          => [
                 'type'           => 'INT',
-                'constraint'     => 255,
+                'constraint'     => 20,
 				'unsigned'       => TRUE
                 
 			],
