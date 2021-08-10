@@ -11,7 +11,7 @@ class ProductoSeeder extends Seeder
 
 		$data = ['nombre' => 'Chaqueta',
 			'talla_id' => '1',
-			'color_id' => '1',
+			'color' => '#000000',
 			'material_id' => '1',
 			'categoria_id' => '1',
 			'clasificacion_id' => '1',
@@ -23,7 +23,7 @@ class ProductoSeeder extends Seeder
 		
 				$data2 = ['nombre' => 'Jean',
 				'talla_id' => '2',
-				'color_id' => '2',
+				'color' => '#000000',
 				'material_id' => '2',
 				'categoria_id' => '2',
 				'clasificacion_id' => '2',

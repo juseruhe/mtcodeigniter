@@ -25,10 +25,9 @@ class ProductoController extends BaseController
     $modelo = new Producto();
 
     $datos["productos"] = $modelo->select("productos.id,productos.nombre,productos.imagen,
-	tallas.nombre talla,colores.nombre color,materiales.nombre material,categorias.nombre categoria,
+	tallas.nombre talla,productos.color,materiales.nombre material,categorias.nombre categoria,
 	clasificaciones.nombre clasificacion,productos.valor,productos.cantidad")
     ->join('tallas','productos.talla_id=tallas.id','inner')
-	->join('colores','productos.color_id=colores.id','inner')
 	->join('materiales','productos.material_id=materiales.id','inner')
 	->join('categorias','productos.categoria_id=categorias.id','inner')
 	->join('clasificaciones','productos.clasificacion_id=clasificaciones.id','inner')
@@ -53,9 +52,6 @@ class ProductoController extends BaseController
 
 		$datos["tallas"] = $modelo->findAll();
 
-        $modelo2 = new Color();
-
-		$datos["colores"] = $modelo2->findAll();
 
 		$modelo3 = new Material();
 
@@ -91,7 +87,7 @@ class ProductoController extends BaseController
 
 		{
 
-			
+			// Caracterés
 			$caracteres = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
 		  $imagen = substr(str_shuffle($caracteres),0,15).'.jpg';
@@ -106,7 +102,7 @@ class ProductoController extends BaseController
 			'nombre' =>  $_POST["nombre"],
             'imagen' =>  $imagen,
 			'talla_id' => $_POST["talla_id"],
-			'color_id' => $_POST["color_id"],
+			'color' => $_POST["color"],
 			'material_id' => $_POST["material_id"],
 			'categoria_id' => $_POST["categoria_id"],
 			'clasificacion_id' => $_POST["clasificacion_id"],
@@ -146,10 +142,9 @@ class ProductoController extends BaseController
 			$modelo = new Producto();
 
 			$datos["producto"] = $modelo->select("productos.id,productos.nombre,productos.imagen,
-			tallas.nombre talla,colores.nombre color,materiales.nombre material,categorias.nombre categoria,
+			tallas.nombre talla,productos.color,materiales.nombre material,categorias.nombre categoria,
 			clasificaciones.nombre clasificacion,productos.valor,productos.cantidad")
 			->join('tallas','productos.talla_id=tallas.id','inner')
-			->join('colores','productos.color_id=colores.id','inner')
 			->join('materiales','productos.material_id=materiales.id','inner')
 			->join('categorias','productos.categoria_id=categorias.id','inner')
 			->join('clasificaciones','productos.clasificacion_id=clasificaciones.id','inner')
@@ -173,11 +168,10 @@ class ProductoController extends BaseController
 		$modelo = new Producto();
 
 		$datos["producto"] = $modelo->select("productos.id,productos.nombre,productos.imagen,
-		tallas.nombre talla,colores.nombre color,materiales.nombre material,categorias.nombre categoria,
+		tallas.nombre talla,productos.color,materiales.nombre material,categorias.nombre categoria,
 		clasificaciones.nombre clasificacion,productos.valor,productos.cantidad,productos.talla_id,
-		productos.material_id,productos.color_id,productos.categoria_id,productos.clasificacion_id")
+		productos.material_id,productos.categoria_id,productos.clasificacion_id")
 		->join('tallas','productos.talla_id=tallas.id','inner')
-		->join('colores','productos.color_id=colores.id','inner')
 		->join('materiales','productos.material_id=materiales.id','inner')
 		->join('categorias','productos.categoria_id=categorias.id','inner')
 		->join('clasificaciones','productos.clasificacion_id=clasificaciones.id','inner')
@@ -189,9 +183,7 @@ class ProductoController extends BaseController
 
 		$datos["tallas"] = $modelo1->findAll();
 
-        $modelo2 = new Color();
-
-		$datos["colores"] = $modelo2->findAll();
+   
 
 		$modelo3 = new Material();
 
@@ -222,8 +214,35 @@ class ProductoController extends BaseController
 
 		$modelo = new Producto();
 
+		if($_FILES["imagen"]["name"] != null)  {
+
+			// Caracterés
+			$caracteres = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+
+		  $imagen = substr(str_shuffle($caracteres),0,15).'.jpg';
+
+		  //copy($_FILES["imagen"]["tmp_name"],"../public/imagenes/".$_FILES["imagen"]["name"]);
+			move_uploaded_file($_FILES["imagen"]["tmp_name"],"../public/imagenes/".$imagen);
+
 		
         $datos = [
+			'nombre' =>  $_POST["nombre"],
+			'imagen'  => $imagen,
+			'talla_id' => $_POST["talla_id"],
+			'color' => $_POST["color"],
+			'material_id' => $_POST["material_id"],
+			'categoria_id' => $_POST["categoria_id"],
+			'clasificacion_id' => $_POST["clasificacion_id"],
+			'valor' => $_POST["valor"],
+			'cantidad' => $_POST["cantidad"]
+		];
+
+		$modelo->where('id',$id)->update($id,$datos);
+	}
+
+	else {
+
+		$datos = [
 			'nombre' =>  $_POST["nombre"],
 			'talla_id' => $_POST["talla_id"],
 			'color_id' => $_POST["color_id"],
@@ -235,6 +254,10 @@ class ProductoController extends BaseController
 		];
 
 		$modelo->where('id',$id)->update($id,$datos);
+
+
+	}
+		
 
 
 		return redirect()->to(base_url().'/producto/'.$id);

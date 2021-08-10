@@ -33,9 +33,9 @@
    
     <td><?php echo $producto["id"] ?></td>
     <td><?php echo $producto["nombre"] ?></td>
-    <td><img src="<?php echo $producto["imagen"] ?>" alt="<?php echo $producto["nombre"] ?>"></td>
+    <td><img src="../imagenes/<?php echo $producto["imagen"] ?>" alt="<?php echo $producto["nombre"] ?>" width="100" height="100"></td>
     <td><?php echo $producto["talla"] ?></td>
-    <td><?php echo $producto["color"] ?></td>
+    <td> <input type="color" value="<?php echo $producto["color"] ?>" disabled>  </td>
     <td><?php echo $producto["material"] ?></td>
     <td><?php echo $producto["categoria"] ?></td>
     <td><?php echo $producto["clasificacion"]?></td>

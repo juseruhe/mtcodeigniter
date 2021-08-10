@@ -72,7 +72,7 @@ class LoginController extends BaseController
 		 $datos["session"]->set($data);
 
 		 
-	         return view('admin/index',$datos);
+	         return redirect()->to(base_url().'/admin')->with('correo',$_POST["correo"]);
 			}
 		}
    

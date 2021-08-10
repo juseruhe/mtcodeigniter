@@ -18,7 +18,7 @@ class Producto extends Migration
 
 			'nombre'          => [
 				'type'           => 'VARCHAR',
-				'constraint'     => 20
+				'constraint'     => 255
 				],
 
 		'imagen'          => [
@@ -27,20 +27,17 @@ class Producto extends Migration
 			'null'  => TRUE
 			],
 
-
-
-       'talla_id'          => [
+			
+	      'talla_id'          => [
                 'type'           => 'INT',
                 'constraint'     => 20,
 				'unsigned'       => TRUE
                 
 			],
 
-			'color_id'          => [
-                'type'           => 'INT',
-                'constraint'     => 20,
-				'unsigned'       => TRUE
-                
+			'color'          => [
+				'type'           => 'VARCHAR',
+				'constraint'     => 255
 			],
 
 
@@ -82,7 +79,6 @@ class Producto extends Migration
 
 			$this->forge->addKey('id',TRUE);
 			$this->forge->addForeignKey('talla_id','tallas','id');
-			$this->forge->addForeignKey('color_id','colores','id');
 			$this->forge->addForeignKey('material_id','materiales','id');
 			$this->forge->addForeignKey('categoria_id','categorias','id');
 			$this->forge->addForeignKey('clasificacion_id','clasificaciones','id');

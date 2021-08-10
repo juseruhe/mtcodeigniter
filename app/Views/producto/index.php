@@ -63,7 +63,7 @@ else if(session('mensaje') == "Eliminado Correctamente"){
     <td><?php echo $producto['nombre'] ?></td>
     <td><img src="../imagenes/<?php echo $producto["imagen"] ?>" alt="<?php echo  $producto['nombre'] ?>" height="100" width="100"></td>
     <td><?php echo $producto['talla'] ?></td>
-    <td><?php echo $producto['color'] ?></td>
+    <td> <input type="color" value="<?php echo $producto['color'] ?>" disabled> </td>
     <td><?php echo $producto['material'] ?></td>
     <td><?php echo $producto['categoria'] ?></td>
     <td><?php echo $producto['clasificacion'] ?></td>

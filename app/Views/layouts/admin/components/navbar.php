@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -124,7 +126,7 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fas fa-building"></i> Ciudad
+        <i class="fas fa-building"></i><i class="fas fa-map"></i> Ciudad
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="<?php echo base_url()."/ciudad" ?>">Mostrar Ciudades</a>
@@ -159,3 +161,4 @@
 
 </ul>
 </nav>
+

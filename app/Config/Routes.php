@@ -54,14 +54,7 @@ $routes->get('categoria/editar/(:num)','CategoriaController::edit/$1');
 $routes->post('categoria/(:num)','CategoriaController::update/$1');
 $routes->get('categoria/eliminar/(:num)','CategoriaController::destroy/$1');
 
-// Color
-$routes->get('color','ColorController::index');
-$routes->get('color/crear','ColorController::create');
-$routes->post('color','ColorController::store');
-$routes->get('color/(:num)','ColorController::show/$1');
-$routes->get('color/editar/(:num)','ColorController::edit/$1');
-$routes->post('color/(:num)','ColorController::update/$1');
-$routes->get('color/eliminar/(:num)','ColorController::destroy/$1');
+
 
 // Clasificación
 $routes->get('clasificacion','ClasificacionController::index');

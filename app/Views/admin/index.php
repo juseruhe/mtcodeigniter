@@ -1,12 +1,9 @@
+
 <?php
 
-
-if(isset($session))
-
-{
+if(session('correo')){
 
 ?>
-
 
 
 
@@ -16,7 +13,7 @@ if(isset($session))
 <div class="row">
 <div class="col-md-12 scroll">
 
-<h3 class="text-center my-4 ">Bienvenido al Administrador Tienda Online <?php echo $session->get('correo') ?> </h3>
+<h3 class="text-center my-4 ">Bienvenido al Administrador Tienda Online  <?php echo session('correo') ?> </h3>
 
 
 
@@ -31,9 +28,9 @@ if(isset($session))
 
 else {
 
-  echo "<a href=".base_url()."/login> Volver </a>";
+  redirect()->to(base_url().'/login');
 
 }
-    
+
 
 ?>

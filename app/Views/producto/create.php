@@ -29,15 +29,9 @@
     </select>
 
     <label for="color">Color:</label>
-    <select name="color_id" class="form-control my-4">
-    <?php  foreach($colores as $color) 
-     {  
-          ?>
-    <option value="<?php echo $color["id"] ?>"><?php echo $color["nombre"]  ?></option>
-    <?php 
- } 
- ?>
-    </select>
+    <input type="color" name="color" class="form-control my-4" required >
+    
+   
 
     <label for="material">Material:</label>
     <select name="material_id" class="form-control my-4" required>

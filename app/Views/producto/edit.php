@@ -9,14 +9,14 @@
    
 
     <div class="card-body text-center">
-    <form action="<?php echo base_url().'/producto/'.$producto["id"]   ?>" method="POST">
+    <form action="<?php echo base_url().'/producto/'.$producto["id"]   ?>" method="POST" enctype="multipart/form-data">
 
     <label for="nombre">Nombre:</label>
     <input type="text" name="nombre" value="<?php echo $producto["nombre"]?>" class="form-control my-4" >
     
     
     <label for="imagen">Imagén:</label>
-    <img src="<?php echo $producto["imagen"]?>" alt="<?php echo $producto["nombre"]?>">
+    <img src="../imagenes/<?php echo $producto["imagen"]?>" alt="<?php echo $producto["nombre"]?>">
     <input type="file" name="imagen" class="form-control my-4" >
 
     <label for="talla">Talla:</label>
@@ -32,16 +32,8 @@
     </select>
 
     <label for="color">Color:</label>
-    <select name="color_id" class="form-control my-4">
-    <option value="<?php echo $producto["color_id"] ?>"><?php echo $producto["color"]  ?></option>
-    <?php  foreach($colores as $color) 
-     {  
-          ?>
-    <option value="<?php echo $color["id"] ?>"><?php echo $color["nombre"]  ?></option>
-    <?php 
- } 
- ?>
-    </select>
+   <input type="color" class=" form-control my-4" name="color" value="<?php echo $producto["color"]  ?>" >
+    
 
     <label for="material">Material:</label>
     <select name="material_id" class="form-control my-4">
